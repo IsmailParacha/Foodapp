@@ -1,4 +1,7 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+
+import '../widget/product.dart';
 
 class home extends StatefulWidget {
   home({Key? key}) : super(key: key);
@@ -144,28 +147,20 @@ class _homeState extends State<home> {
               ],
             ),
           ),
-          Row(
-            children: [
-              Container(
-                height: 230,
-                width: 160,
-                decoration: BoxDecoration(
-                    // color: Color(0xffd9dad9),
-                    color: Colors.white12,
-                    borderRadius: BorderRadius.circular(10)),
-                child: Column(
-                  children: [
-                    Expanded(
-                        flex: 2,
-                        child: Image(
-                          image: AssetImage('assets/basil.jpg'),
-                          fit: BoxFit.fill,
-                        )),
-                    Expanded(child: Container())
-                  ],
-                ),
-              )
-            ],
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: [
+                product(),
+                product(),
+                product(),
+                product(),
+                product(),
+                product(),
+                product(),
+                product(),
+              ],
+            ),
           )
         ]),
       ),
