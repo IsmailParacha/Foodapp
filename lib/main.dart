@@ -19,12 +19,13 @@ class mainclass extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Ecommerece App",
-      home: home(),
+      home: signin(),
       routes: {
         // "/home": (context) => home(),
         "/loginemail": (context) => login(),
         "/signin": (context) => signin(),
         "/signup": (context) => signup(),
+        "/home": (context) => home(),
       },
     );
   }

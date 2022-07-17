@@ -52,7 +52,7 @@ class _homeState extends State<home> {
       ),
       body: Padding(
         padding: const EdgeInsets.all(10.0),
-        child: Column(children: [
+        child: ListView(children: [
           Container(
             height: 150,
             decoration: BoxDecoration(
@@ -134,8 +134,9 @@ class _homeState extends State<home> {
               )),
             ]),
           ),
+          //herb section
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: 8.0),
+            padding: const EdgeInsets.only(top: 20.0, bottom: 8.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -155,15 +156,114 @@ class _homeState extends State<home> {
             scrollDirection: Axis.horizontal,
             child: Row(
               children: [
-                product("assets/basil.png", "Fresh Basil", "Rs50/50 Gram"),
-                product("assets/redchillipowder.jpg", "Red Chilli Powder",
-                    "Rs50/50 Gram"),
-                product("assets/cucomber.jpg", "Fresh ", "Rs50/ 1 KG"),
-                product("assets/tomato.jpg", "Fresh ", "Rs100/ 1 KG"),
-                product("assets/potato.jpg", "Fresh ", "Rs150/ 1 KG"),
+                product("assets/basil.png", "Fresh Basil", "Rs30 / 50 Gram",
+                    "50Gram"),
+                product("assets/mint.jpg", "Fresh Mint", "Rs40 / 50 Gram",
+                    "50Gram"),
+                product("assets/saga.jpg", "Fresh Saga ", "Rs50 / 50 Gram",
+                    "50Gram"),
               ],
             ),
-          )
+          ),
+
+//vegitable section
+          Padding(
+            padding: const EdgeInsets.only(top: 20.0, bottom: 8.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "Powder Seasonings",
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold),
+                ),
+                Text("view all",
+                    style: TextStyle(color: Colors.grey[800], fontSize: 15))
+              ],
+            ),
+          ),
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: [
+                product("assets/redchillipowder.jpg", "Red Chilli Powder ",
+                    "Rs50/ 50Gram", "50Gram"),
+                product("assets/blackpepper.jpg", "Black Pepper Powder",
+                    "Rs100/ 50Gram", "50Gram"),
+                product("assets/kala.jpg", "Kala Powder ", "Rs150/ 50Gram",
+                    "50Gram"),
+                product("assets/spiroline.jpg", "Spiroline Powder ",
+                    "Rs250/ 50Gram", "50Gram"),
+              ],
+            ),
+          ),
+
+//vegitable section
+          Padding(
+            padding: const EdgeInsets.only(top: 20.0, bottom: 8.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "Vegitable Seasonings",
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold),
+                ),
+                Text("view all",
+                    style: TextStyle(color: Colors.grey[800], fontSize: 15))
+              ],
+            ),
+          ),
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: [
+                product("assets/carrot.png", "Carrot ", "Rs40/ 1 KG", "1 KG"),
+                product(
+                    "assets/cucomber.jpg", "Cucomber ", "Rs50/ 1 KG", "1 KG"),
+                product("assets/tomato.jpg", "Tomato ", "Rs100/ 1 KG", "1 KG"),
+                product("assets/pees.jpg", "Pees ", "Rs150/ 1 KG", "1 KG"),
+                product("assets/potato.jpg", "Potato ", "Rs150/ 1 KG", "1 KG"),
+                product("assets/onion.png", "Onion ", "Rs50/ 1 KG", "1 KG"),
+              ],
+            ),
+          ),
+
+          //fruit section
+          Padding(
+            padding: const EdgeInsets.only(top: 20.0, bottom: 8.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "Fruit Seasonings",
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold),
+                ),
+                Text("view all",
+                    style: TextStyle(color: Colors.grey[800], fontSize: 15))
+              ],
+            ),
+          ),
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: [
+                product("assets/apple.jpg", "Apple ", "Rs140/ 1 KG", "1 KG"),
+                product("assets/banana.jpg", "Banana ", "Rs50/ 1 Dargan",
+                    "1 Dargan"),
+                product("assets/orange.jpg", "Orange ", "Rs100/ 1 KG", "1 KG"),
+                product("assets/onion.png", "Onion ", "Rs50/ 1 KG", "1 KG"),
+                product("assets/peach.jpg", "Peach ", "Rs150/ 1 KG", "1 KG"),
+              ],
+            ),
+          ),
         ]),
       ),
     );

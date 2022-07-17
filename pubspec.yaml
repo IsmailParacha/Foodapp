@@ -64,7 +64,6 @@ flutter:
     # fruit
     - assets/apple.jpg
     - assets/banana.jpg
-    - assets/tomato.jpg
     - assets/orange.jpg
     - assets/pees.jpg
     - assets/peach.jpg

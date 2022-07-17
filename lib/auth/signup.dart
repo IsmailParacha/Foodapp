@@ -101,7 +101,10 @@ class _signupState extends State<signup> {
                   decoration: InputDecoration(
                       hintText: "Password",
                       suffixIcon: IconButton(
-                          onPressed: () {}, icon: Icon(Icons.visibility)),
+                          onPressed: () {
+                            Navigator.pushNamed(context, "/home");
+                          },
+                          icon: Icon(Icons.visibility)),
                       enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(5.0),
                           borderSide:

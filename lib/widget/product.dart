@@ -5,9 +5,10 @@ import 'package:flutter/src/widgets/framework.dart';
 
 class product extends StatelessWidget {
   final String imagelink;
+  final String measure;
   final String name;
   final String prize;
-  product(this.imagelink, this.name, this.prize);
+  product(this.imagelink, this.name, this.prize, this.measure);
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -28,7 +29,7 @@ class product extends StatelessWidget {
                   flex: 2,
                   child: Image(
                     image: AssetImage('$imagelink'),
-                    fit: BoxFit.fill,
+                    fit: BoxFit.cover,
                   )),
               Expanded(
                   child: Padding(
@@ -58,7 +59,7 @@ class product extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Text(
-                                "50 Gram",
+                                "$measure",
                                 style: TextStyle(fontSize: 10),
                               ),
                               Icon(
@@ -86,7 +87,7 @@ class product extends StatelessWidget {
                                 size: 15,
                               ),
                               Text(
-                                "50 Gram",
+                                "$measure",
                                 style: TextStyle(fontSize: 10),
                               ),
                               Icon(
