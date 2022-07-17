@@ -63,6 +63,14 @@ flutter:
   assets:
     - assets/background.png
     - assets/basil.png
+    - assets/1.jpg
+    - assets/green.jpg
+    - assets/green1.jpg
+    - assets/green2.jpg
+    - assets/potato.jpg
+    - assets/redchillipowder.jpg
+    - assets/tomato.jpg
+    - assets/yellopoder.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

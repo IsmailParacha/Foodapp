@@ -141,9 +141,13 @@ class _homeState extends State<home> {
               children: [
                 Text(
                   "Herbs Seasonings",
-                  style: TextStyle(color: Colors.black),
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold),
                 ),
-                Text("view all", style: TextStyle(color: Colors.grey[800]))
+                Text("view all",
+                    style: TextStyle(color: Colors.grey[800], fontSize: 15))
               ],
             ),
           ),
