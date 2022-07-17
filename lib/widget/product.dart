@@ -30,7 +30,7 @@ class _productState extends State<product> {
               Expanded(
                   flex: 2,
                   child: Image(
-                    image: AssetImage('assets/basil.jpg'),
+                    image: AssetImage('assets/basil.png'),
                     fit: BoxFit.fill,
                   )),
               Expanded(
@@ -64,7 +64,10 @@ class _productState extends State<product> {
                                 "50 Gram",
                                 style: TextStyle(fontSize: 10),
                               ),
-                              Icon(Icons.arrow_drop_down)
+                              Icon(
+                                Icons.arrow_drop_down,
+                                color: Color.fromARGB(255, 222, 194, 13),
+                              )
                             ],
                           ),
                         )),
@@ -82,6 +85,7 @@ class _productState extends State<product> {
                             children: [
                               Icon(
                                 Icons.remove,
+                                color: Color.fromARGB(255, 222, 194, 13),
                                 size: 15,
                               ),
                               Text(
@@ -90,6 +94,7 @@ class _productState extends State<product> {
                               ),
                               Icon(
                                 Icons.add,
+                                color: Color.fromARGB(255, 222, 194, 13),
                                 size: 15,
                               )
                             ],
