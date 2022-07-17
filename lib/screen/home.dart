@@ -157,7 +157,10 @@ class _homeState extends State<home> {
                   children: [
                     Expanded(
                         flex: 2,
-                        child: Image(image: AssetImage('assets/basil.jpg'))),
+                        child: Image(
+                          image: AssetImage('assets/basil.jpg'),
+                          fit: BoxFit.fill,
+                        )),
                     Expanded(child: Container())
                   ],
                 ),
