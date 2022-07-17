@@ -156,7 +156,11 @@ class _homeState extends State<home> {
             child: Row(
               children: [
                 product("assets/basil.png", "Fresh Basil", "Rs50/50 Gram"),
-                product("assets/tomato.jpg", "Fresh ", "Rs50/50 Gram"),
+                product("assets/redchillipowder.jpg", "Red Chilli Powder",
+                    "Rs50/50 Gram"),
+                product("assets/cucomber.jpg", "Fresh ", "Rs50/ 1 KG"),
+                product("assets/tomato.jpg", "Fresh ", "Rs100/ 1 KG"),
+                product("assets/potato.jpg", "Fresh ", "Rs150/ 1 KG"),
               ],
             ),
           )
