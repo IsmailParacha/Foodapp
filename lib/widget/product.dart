@@ -3,14 +3,11 @@ import 'package:flutter/src/foundation/key.dart';
 
 import 'package:flutter/src/widgets/framework.dart';
 
-class product extends StatefulWidget {
-  const product({Key? key}) : super(key: key);
-
-  @override
-  State<product> createState() => _productState();
-}
-
-class _productState extends State<product> {
+class product extends StatelessWidget {
+  final String imagelink;
+  final String name;
+  final String prize;
+  product(this.imagelink, this.name, this.prize);
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -30,7 +27,7 @@ class _productState extends State<product> {
               Expanded(
                   flex: 2,
                   child: Image(
-                    image: AssetImage('assets/basil.png'),
+                    image: AssetImage('$imagelink'),
                     fit: BoxFit.fill,
                   )),
               Expanded(
@@ -40,12 +37,12 @@ class _productState extends State<product> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "Fresh Basil",
+                      "$name",
                       style: TextStyle(
                           color: Colors.black, fontWeight: FontWeight.bold),
                     ),
                     Text(
-                      "Rs50/50 Gram",
+                      "$prize",
                       style: TextStyle(color: Colors.grey),
                     ),
                     Row(

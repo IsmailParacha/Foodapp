@@ -155,14 +155,8 @@ class _homeState extends State<home> {
             scrollDirection: Axis.horizontal,
             child: Row(
               children: [
-                product(),
-                product(),
-                product(),
-                product(),
-                product(),
-                product(),
-                product(),
-                product(),
+                product("assets/basil.png", "Fresh Basil", "Rs50/50 Gram"),
+                product("assets/tomato.jpg", "Fresh ", "Rs50/50 Gram"),
               ],
             ),
           )
