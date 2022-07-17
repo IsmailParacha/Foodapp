@@ -11,6 +11,7 @@ class _homeState extends State<home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[400],
       drawer: Drawer(),
       appBar: AppBar(
         iconTheme: IconThemeData(color: Colors.black),
@@ -46,10 +47,10 @@ class _homeState extends State<home> {
           ),
         ],
       ),
-      body: Column(children: [
-        Padding(
-          padding: const EdgeInsets.all(10.0),
-          child: Container(
+      body: Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: Column(children: [
+          Container(
             height: 150,
             decoration: BoxDecoration(
               image: DecorationImage(
@@ -88,40 +89,83 @@ class _homeState extends State<home> {
                                 style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 17.0,
+                                    fontWeight: FontWeight.bold,
                                     shadows: [
                                       BoxShadow(
-                                          blurRadius: 5,
+                                          blurRadius: 1,
                                           color: Colors.green.shade900,
                                           offset: Offset(3, 3))
                                     ]),
                               ),
                             ),
                           )),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 50.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "30% Off",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 40.0,
+                                  shadows: [
+                                    BoxShadow(
+                                        blurRadius: 2,
+                                        color:
+                                            Color.fromARGB(255, 255, 255, 255),
+                                        offset: Offset(1, 1))
+                                  ]),
+                            ),
+                            Text(
+                              "On all vegitables products",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold),
+                            )
+                          ],
+                        ),
+                      )
                     ]),
               )),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    "30% Off",
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 17.0,
-                        shadows: [
-                          BoxShadow(
-                              blurRadius: 5,
-                              color: Colors.green.shade900,
-                              offset: Offset(3, 3))
-                        ]),
-                  ),
-                  Text("On all vegitables products")
-                ],
-              )
             ]),
           ),
-        )
-      ]),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 8.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "Herbs Seasonings",
+                  style: TextStyle(color: Colors.black),
+                ),
+                Text("view all", style: TextStyle(color: Colors.grey[800]))
+              ],
+            ),
+          ),
+          Row(
+            children: [
+              Container(
+                height: 230,
+                width: 160,
+                decoration: BoxDecoration(
+                    // color: Color(0xffd9dad9),
+                    color: Colors.white12,
+                    borderRadius: BorderRadius.circular(10)),
+                child: Column(
+                  children: [
+                    Expanded(
+                        flex: 2,
+                        child: Image(image: AssetImage('assets/basil.jpg'))),
+                    Expanded(child: Container())
+                  ],
+                ),
+              )
+            ],
+          )
+        ]),
+      ),
     );
   }
 }
