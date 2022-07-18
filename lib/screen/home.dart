@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
+import '../widget/drawerlist.dart';
 import '../widget/product.dart';
 
 class home extends StatefulWidget {
@@ -15,7 +16,64 @@ class _homeState extends State<home> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[400],
-      drawer: Drawer(),
+      drawer: Drawer(
+        child: Container(
+          color: Color(0xffd1ad17),
+          child: ListView(
+            children: [
+              DrawerHeader(
+                  child: Row(
+                children: [
+                  CircleAvatar(
+                    backgroundColor: Colors.white54,
+                    radius: 43,
+                    child: CircleAvatar(
+                      backgroundColor: Colors.red,
+                      radius: 40,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Container(
+                          margin: EdgeInsets.only(left: 10.0),
+                          child: Text("Welcome Guest")),
+                      SizedBox(
+                        height: 7,
+                      ),
+                      Container(
+                        height: 30,
+                        width: 80,
+                        child: OutlinedButton(
+                          onPressed: () {},
+                          child: Text(
+                            "Login",
+                            style: TextStyle(color: Colors.black),
+                          ),
+                          style: ButtonStyle(
+                            shape: MaterialStateProperty.all<
+                                RoundedRectangleBorder>(
+                              RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(15)),
+                            ),
+                          ),
+                        ),
+                      )
+                    ],
+                  )
+                ],
+              )),
+              drawerlist(Icon(Icons.home), "Home"),
+              drawerlist(Icon(Icons.shopping_cart), "Review Cart"),
+              drawerlist(Icon(Icons.person), "My Profile"),
+              drawerlist(Icon(Icons.notification_add), "Notification"),
+            ],
+          ),
+        ),
+      ),
       appBar: AppBar(
         iconTheme: IconThemeData(color: Colors.black),
         backgroundColor: Color.fromARGB(255, 222, 194, 13),
