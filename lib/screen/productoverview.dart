@@ -36,6 +36,28 @@ class _productviewState extends State<productview> {
                   image: AssetImage("assets/basil.png"),
                   fit: BoxFit.fill,
                 )),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Divider(),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 18.0),
+                    child: Text(
+                      "About This Product",
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold, fontSize: 16.0),
+                    ),
+                  ),
+                  Text(
+                    "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+                    textAlign: TextAlign.justify,
+                    style: TextStyle(color: Colors.grey[800]),
+                  )
+                ],
+              ),
+            )
           ]),
     );
   }
