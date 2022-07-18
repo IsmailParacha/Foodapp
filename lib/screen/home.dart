@@ -33,7 +33,7 @@ class _homeState extends State<home> {
                     ),
                   ),
                   SizedBox(
-                    height: 20,
+                    width: 20,
                   ),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -70,10 +70,38 @@ class _homeState extends State<home> {
               drawerlist(Icon(Icons.shopping_cart), "Review Cart"),
               drawerlist(Icon(Icons.person), "My Profile"),
               drawerlist(Icon(Icons.notification_add), "Notification"),
-              drawerlist(Icon(Icons.home), "Home"),
-              drawerlist(Icon(Icons.shopping_cart), "Review Cart"),
-              drawerlist(Icon(Icons.person), "My Profile"),
-              drawerlist(Icon(Icons.notification_add), "Notification"),
+              drawerlist(Icon(Icons.star), "Rating & Review"),
+              drawerlist(Icon(Icons.favorite), "Wishlist"),
+              drawerlist(Icon(Icons.copy), "Raise a complain"),
+              drawerlist(Icon(Icons.question_answer), "FAQs"),
+              Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Container(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Contact support",
+                        style: TextStyle(
+                            color: Colors.black, fontWeight: FontWeight.bold),
+                      ),
+                      Row(
+                        children: [
+                          Text("Call us:"),
+                          Text("03160923455"),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Text("Mail us:"),
+                          Text("ismailjanparacha@gmail.com"),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              )
             ],
           ),
         ),

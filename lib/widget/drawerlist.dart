@@ -14,8 +14,9 @@ class drawerlist extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      leading: icon,
-      title: Text('$name'),
-    );
+        leading: icon,
+        title: Text(
+          '$name',
+        ));
   }
 }
