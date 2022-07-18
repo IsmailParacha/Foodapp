@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_application_1/screen/home.dart';
+import 'package:flutter_application_1/screen/productoverview.dart';
 import 'auth/loginmail.dart';
 import 'auth/signin.dart';
 import 'auth/signup.dart';
@@ -19,7 +20,7 @@ class mainclass extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Ecommerece App",
-      home: signin(),
+      home: productview(),
       routes: {
         // "/home": (context) => home(),
         "/loginemail": (context) => login(),
